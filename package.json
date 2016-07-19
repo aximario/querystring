@@ -1,0 +1,18 @@
+{
+    "name": "ax-querystring",
+    "version": "0.0.0",
+    "description": "阿希的querystring工具",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aximario/ax-querystring.git"
+    },
+    "keywords": ["querystring", "aximario", "axi"],
+    "author": "aximario <aximario@qq.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/aximario/ax-querystring/issues"
+    },
+    "homepage": "https://github.com/aximario/ax-querystring#readme"
+}
