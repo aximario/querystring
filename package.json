@@ -1,6 +1,6 @@
 {
     "name": "ax-querystring",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "阿希的querystring工具",
     "main": "index.js",
     "scripts": {},
