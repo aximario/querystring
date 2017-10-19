@@ -3,16 +3,26 @@
     "version": "0.1.1",
     "description": "阿希的querystring工具",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "test": "mocha"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/aximario/ax-querystring.git"
     },
-    "keywords": ["querystring", "aximario", "axi"],
+    "keywords": [
+        "querystring",
+        "aximario",
+        "axi"
+    ],
     "author": "aximario <aximario@qq.com>",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/aximario/ax-querystring/issues"
     },
-    "homepage": "https://github.com/aximario/ax-querystring#readme"
+    "homepage": "https://github.com/aximario/ax-querystring#readme",
+    "devDependencies": {
+        "mocha": "^4.0.1",
+        "should": "^13.1.2"
+    }
 }

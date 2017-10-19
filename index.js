@@ -1,2 +1,6 @@
-exports.parse = require('./lib/parse');
-exports.stringify = require('./lib/stringify');
+module.exports = {
+  parse: require('./lib/parse'),
+  stringify: require('./lib/stringify'),
+  escape: require('./lib/escape'),
+  unescape: require('./lib/unescape')
+};
