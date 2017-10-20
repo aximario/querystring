@@ -1,5 +1,5 @@
 var should = require('should');
-var qs = require('../index');
+var qs = require('../querystring');
 var nqs = require('querystring');
 
 should.config.checkProtoEql = false;

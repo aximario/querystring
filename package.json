@@ -1,28 +1,28 @@
 {
-    "name": "querystring",
+    "name": "ax-querystring",
     "version": "1.0.0",
     "description": "querystring",
-    "main": "index.js",
+    "main": "querystring.js",
     "scripts": {
+        "build": "webpack",
         "test": "mocha"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aximario/ax-querystring.git"
+        "url": "git+https://github.com/aximario/querystring.git"
     },
     "keywords": [
-        "querystring",
-        "aximario",
-        "axi"
+        "querystring"
     ],
     "author": "aximario <aximario@qq.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/aximario/ax-querystring/issues"
+        "url": "https://github.com/aximario/querystring/issues"
     },
-    "homepage": "https://github.com/aximario/ax-querystring#readme",
+    "homepage": "https://github.com/aximario/querystring#readme",
     "devDependencies": {
         "mocha": "^4.0.1",
-        "should": "^13.1.2"
+        "should": "^13.1.2",
+        "webpack": "^3.8.1"
     }
 }

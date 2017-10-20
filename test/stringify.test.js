@@ -1,5 +1,5 @@
 var should = require('should');
-var qs = require('../index');
+var qs = require('../querystring');
 var nqs = require('querystring');
 
 describe("Stringify", function () {
@@ -26,6 +26,11 @@ describe("Stringify", function () {
   describe("stringify({ key1: 'foo', key2: false, key3: [ 2, true ], key4: function() {} })", function () {
     it("function should be parsed to empty string", function () {
       qs.stringify({ key1: 'foo', key2: false, key3: [ 2, true ], key4: function() {} }).should.be.exactly(nqs.stringify({ key1: 'foo', key2: false, key3: [ 2, true ], key4: function() {} }));
+    });
+  });
+  describe("stringify({ key1: 'foo', key2: false, key3: [ 2, true ], key4: function() {} }, ';', ':')", function () {
+    it("function should be parsed to empty string", function () {
+      qs.stringify({ key1: 'foo', key2: false, key3: [ 2, true ], key4: function() {} }, ';', ':').should.be.exactly(nqs.stringify({ key1: 'foo', key2: false, key3: [ 2, true ], key4: function() {} }, ';', ':'));
     });
   });
 });
