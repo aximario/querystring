@@ -1,4 +1,5 @@
 # querystring
+![CI](https://api.travis-ci.org/aximario/querystring.svg?branch=master)
 
 Node.js LTS querystring module for browsers
 
