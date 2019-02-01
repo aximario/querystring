@@ -1,1 +1,43 @@
-!function(e){var n={};function r(t){if(n[t])return n[t].exports;var o=n[t]={i:t,l:!1,exports:{}};return e[t].call(o.exports,o,o.exports,r),o.l=!0,o.exports}r.m=e,r.c=n,r.d=function(e,n,t){r.o(e,n)||Object.defineProperty(e,n,{enumerable:!0,get:t})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,n){if(1&n&&(e=r(e)),8&n)return e;if(4&n&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(r.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&n&&"string"!=typeof e)for(var o in e)r.d(t,o,function(n){return e[n]}.bind(null,o));return t},r.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(n,"a",n),n},r.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},r.p="",r(r.s=0)}([function(e,n){e.exports={stringify:function(e){var n=[];for(key in e){var r=e[key];Array.isArray(r)?r.forEach(function(e){return n.push("".concat(key,"=").concat(encodeURIComponent(e)))}):n.push("".concat(key,"=").concat(encodeURIComponent(r)))}return"?".concat(n.join("&"))},parse:function(e){var n={};return e.slice(1).split("&").forEach(function(e){var r=e.split("="),t=r[0],o=decodeURIComponent(r[1]);n.hasOwnProperty(t)?Array.isArray(n[t])?n[t].push(o):(n[t]=[n[t]],n[t].push(o)):n[t]=o}),n}}}]);
+'use strict';
+
+module.exports = {
+    stringify: function stringify(queryobject) {
+        var resArr = [];
+
+        var _loop = function _loop(key) {
+            var item = queryobject[key];
+            if (Array.isArray(item)) {
+                item.forEach(function (v) {
+                    return resArr.push(key + '=' + encodeURIComponent(v));
+                });
+            } else {
+                resArr.push(key + '=' + encodeURIComponent(item));
+            }
+        };
+
+        for (var key in queryobject) {
+            _loop(key);
+        }
+        return '?' + resArr.join('&');
+    },
+    parse: function parse(querystring) {
+        var result = {};
+        var query = querystring.slice(1).split('&');
+        query.forEach(function (kv) {
+            var kvPair = kv.split('=');
+            var key = kvPair[0];
+            var val = decodeURIComponent(kvPair[1]);
+            if (result.hasOwnProperty(key)) {
+                if (Array.isArray(result[key])) {
+                    result[key].push(val);
+                } else {
+                    result[key] = [result[key]];
+                    result[key].push(val);
+                }
+            } else {
+                result[key] = val;
+            }
+        });
+        return result;
+    }
+};

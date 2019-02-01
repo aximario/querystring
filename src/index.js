@@ -1,7 +1,7 @@
 module.exports = {
     stringify(queryobject) {
-        var resArr = []
-        for (key in queryobject) {
+        const resArr = []
+        for (let key in queryobject) {
             const item = queryobject[key]
             if (Array.isArray(item)) {
                 item.forEach((v) => resArr.push(`${key}=${encodeURIComponent(v)}`))
