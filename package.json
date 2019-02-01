@@ -1,11 +1,11 @@
 {
-    "name": "ax-querystring",
+    "name": "@aximario/querystring",
     "version": "1.0.0",
     "description": "querystring",
     "main": "querystring.js",
     "scripts": {
         "build": "webpack",
-        "test": "mocha"
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -21,8 +21,8 @@
     },
     "homepage": "https://github.com/aximario/querystring#readme",
     "devDependencies": {
-        "mocha": "^4.0.1",
-        "should": "^13.1.2",
-        "webpack": "^3.8.1"
+        "jest": "^24.0.0",
+        "webpack": "^4.29.0",
+        "webpack-cli": "^3.2.1"
     }
 }
