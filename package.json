@@ -2,8 +2,9 @@
     "name": "@aximario/querystring",
     "version": "1.0.0",
     "description": "querystring",
-    "main": "querystring.js",
+    "main": "./dist/index.js",
     "scripts": {
+        "publish": "npm publish --access public",
         "build": "webpack",
         "test": "jest"
     },
